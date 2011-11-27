@@ -20,8 +20,6 @@ Vagrant::Config.run do |config|
     chef.json = {:user => ENV['USER']}
     chef.add_recipe "accounts"
     chef.add_recipe "build-essential"
-    chef.add_recipe "vim"
-    chef.add_recipe "screen"
     chef.add_recipe "basedev"
     # You can put together a user-specific cookbook to set up your own VM how
     # you like by adding it to cookbooks/your_user_name
