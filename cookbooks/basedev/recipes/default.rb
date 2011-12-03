@@ -21,7 +21,6 @@ cookbook_file "/etc/security/limits.conf" do
 end
 
 package "git-core"
-package "maven2"
 package "ruby-dev"
 package "rubygems"
 
