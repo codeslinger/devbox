@@ -10,7 +10,7 @@ Vagrant::Config.run do |config|
     vm.name = "dev"
   end
 
-  config.vm.forward_port "ssh", 22, 10022
+  config.vm.forward_port "ssh", 22, 12022
   config.vm.forward_port "http", 80, 10080
   config.vm.forward_port "https", 443, 10443
   config.vm.forward_port "rails", 3000, 13000
