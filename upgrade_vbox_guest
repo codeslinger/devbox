@@ -1,0 +1,20 @@
+#!/bin/sh
+VBOX_VERSION=4.1.8
+
+sudo aptitude update
+sudo aptitude install python-software-properties
+sudo add-apt-repository ppa:debfx/virtualbox
+
+wget http://download.virtualbox.org/virtualbox/${VBOX_VERSION}/VBoxGuestAdditions_${VBOX_VERSION}.iso
+sudo mount VBoxGuestAdditions_${VBOX_VERSION}.iso -o loop /mnt
+cd /mnt
+sudo sh VBoxLinuxAdditions.run --nox11
+sudo umount /mnt
+sudo rm -f VBoxGuestAdditions_${VBOX_VERSION}.iso
+
+echo "Now restart this VM to activate new guest additions:"
+echo
+echo "  vagrant halt"
+echo "  vagrant up"
+echo
+
